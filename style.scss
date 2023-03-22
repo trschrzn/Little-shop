@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+$yellow: #ffba00;
+$brown: #39201e;
+$lightBrown: #bb8a52;
+$red: #8f3e43;
+$black: #161616;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    background-color: #e5e5f7;
+    background-image: radial-gradient(#849b95 0.9px, #e5e5f7 0.9px);
+    background-size: 18px 18px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.socials{
+    background: #e5e5f7;
+    padding: 13px 0;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+
+    a{
+        color: $black;
+        &:hover{
+            transform: scale(150%); 
+            transition: all .4s ease-in-out;
+        }
+    }
+}
+.icon-phone:hover {color: $yellow; transition: all .4s ease-in-out;}
+.icon-facebook:hover {color: blue;transition: all .4s ease-in-out;}
+.icon-github-circled:hover {color: #1b1b2c;transition: all .4s ease-in-out;}
+.icon-instagram:hover {color: purple; transition: all .4s ease-in-out;}
+.icon-google:hover {color: red;transition: all .4s ease-in-out;}
+.icon-snapchat-ghost:hover {color: yellow;transition: all .4s ease-in-out;}
+
+header{
+    background-color: $black;
+    max-height: 80px;
+    width: 90vw;
+    margin: auto;
+    color: white;
+    display: flex;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.headerTitle{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+    font-size: 60px;
+    font-family: 'Zeyada', cursive;
+    span{
+        &:first-child{
+            color: $yellow;
+        }
+    }
+    img{
+        position: absolute;
+        right: -50px;
+        width: 50px;
+    }
+}
+
+.basketIcon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20px;
+    gap: 5px;
+    position: relative;
+    img{
+        filter: invert(77%) sepia(67%) saturate(2895%) hue-rotate(360deg) brightness(103%) contrast(104%);
+        width: 50px;
+    }
+}
+.basketClear
+{
+    background: none;
+    border: none;
+    color: $yellow;
+    font-size: 22px;
+    align-self: self-start;
+    cursor: pointer;
+    display: none;
+
+    &.active{
+        display: block;
+    }
+}
+
+.container{
+    background: white;
+    width: 90vw;
+    margin: auto;
+    display: flex;
+}
+
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 0 40px 0 40px;
+    width: 10vw;
+    .categoriesTitle{
+        font-size: 25px;
+        letter-spacing: 2px;
+        margin: 90px 0 20px 0;
+        color: $brown;
+    }
+}
+form.nosubmit {
+    margin: 50px 20px 0 20px;
+    color: $brown;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 13vw;
+    position: relative;
+      
+    input {
+        border: none;
+        border-radius: 13px;
+        display: block;
+        padding: 9px 4px 9px 40px;
+        background-image: url('images/lupa.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+        outline: 1px outset $yellow;
+        color: $brown;
+        &#priceRange{
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    button{
+        position: absolute;
+        font-size: 27px;
+        font-weight: bold;
+        right: 7px;
+        top: 0;
+        align-items: center;
+        background: none;
+        color: $brown;
+        cursor: pointer;
+        border: none;
+        &:hover{
+            color: $red;
+            background: none;
+        }
+    }
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+// range input
+form.priceRange{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 40px;
+    h2{
+        text-align: left;
+        margin-left: -15px;
+        font-size: 17px;
+        color: $brown;
+        font-weight: bold;
+    }
+}
+.priceFilter{
+    padding: 7px;
+    input[type=text]{
+        border-radius: 5px;
+        border: 2px solid $lightBrown;
+        color: $black;
+        width: 100%;
+        padding: 6px 10px;
+        &:focus, &:active{
+            outline: none;
+            border: 2px solid $red;
+        }
+    }
+}
+#filtr{
+    font-weight: bold;
+    align-items: center;
+    background: $brown;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 13px;
+    padding: 8px 16px;
+    &:hover{
+        color: $red;
+        background: none;
+    }
+    &:hover{
+        background: $lightBrown;
+    }
+}
+
+.categoriesItems
+{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+
+    button{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 5px 22px;
+        border: none;
+        background: none;
+        transition: all .4s ease;
+        color: $lightBrown;
+
+        &:hover, &.active{
+            color: $brown;
+        }
+    }
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+
+.productItem{
+    max-width: 300px;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    transition: all .5s ease;
+    img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    &:hover{
+        box-shadow: 8px 8px 24px 0px rgba(66, 68,90, 1);
+        border-radius: 15px;
+    }
+    &.onSale
+    {
+        .price{
+            color: #000;
+            font-size: 13px;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 110%;
+                height: 2px;
+                background: $red;
+                top: 50%;
+                left: -5%;
+                transform: rotate(10deg);
+            }
+        }
+        .priceSale{
+            display: block;
+        }
+        .productItemSaleInfo{display: block;}
+    }
+}
+.mainButton{
+    padding: 10px 23px;
+    border: 0;
+    border-radius: 15px;
+    background: $brown;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover{
+        background: $lightBrown;
+    }
+}
+.productItemSaleInfo
+    {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: $red;
+    padding: 5px 10px;
+    letter-spacing: 1px;
+    }
+.productPrice
+{
+    .priceSale{
+        display: none;
+        color: green;
+    }
+    
+    color: black;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.productName
+{
+    font-weight: 700;
+    font-size: 23px;
+}
+.productDescription{
+    color: darkgray;
+    font-size: 15px;
+    line-height: 150%;
+}
+.productAddToBasket{
+    background: $brown;
+    border-radius: 7px;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+    padding: 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    width: 60%;
+    transition: all .3s ease-in-out;
+
+    &:hover{
+        color: $yellow;
+        background: rgba(0,0,0,.9);
+    }
+}
+.emptyState
+{
+    display: none;
+    font-size: 30px;
+    margin: 60px auto;
+
+    &.active{
+        display: block;
+    }
+}
+.wrapper{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 25vw;
+    background: $lightBrown;
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    &#active{
+        right: 0;
+        .closeBasket{
+            background: none;
+            position: absolute;
+            border: 0;
+            right: 5px;
+            top: 5px;
+            font-size: 22px;
+            color: white;
+            cursor: pointer;
+            &:hover{
+                color: $yellow;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    gap: 20px;
+    color: $brown;
+    button{
+        border: 0;
+        background: none;
+        font-size: 26px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover{
+            color: $yellow;
+            background: none;
+        }
+    }
+}
+
+
+.basketText{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 35px 15px;
+    gap: 30px;
+    color: $black;
+    font-size: 15px;
+    text-transform: lowercase;
+    min-width: 150px;
+    h2:nth-child(2){
+        color: $red;
+    }
+
+    button{
+        padding: 7px 20px;
+        border: 0;
+        font-size: 16px;
+        background: $red;
+        color: white;
+        cursor: pointer;
+        border-radius: 15px;
+        &:hover{
+            background: $brown;
+        }
+    }
+}
+.cartAmount
+{
+    background: $red;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 3px 9px;
+}
+
+@media only screen and (max-width: 680px)
+{
+    .container {flex-direction: column;}
+    .categories {flex-direction: row; flex-wrap: wrap; margin: 0; width: 100%; .categoriesTitle {margin: 20px;}}
+    .headerTitle{font-size: 30px;}
+    .categoriesItems {flex-direction: row; justify-content: center;}
+    form.nosubmit {width: 80vw; margin-top: 20px; align-items: center;}
+    .priceFilter{ margin-left: 30px;
+        input[type=text]{width: 20vw;}}
+    #filtr {margin-top: 70px;}
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/drink.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
+
+
+    <title>Amatorski sklep | sklep internetowy</title>
+</head>
+<body>
+    <section class="socials">
+        <a href="tel:609-778-592"><i class="icon-phone"></i></a>
+        <a href="https://facebook.com/teresachrzan12"><i class="icon-facebook"></i></a>
+        <a href="https://github.com/trschrzn"><i class="icon-github-circled"></i></a>
+        <a href="mailto:teresachrzan120100@gmail.com"><i class="icon-google"></i></a>
+        <a href="https://instagram.com/trschrzn"><i class="icon-instagram"></i></a>
+        <a href="#"><i class="icon-snapchat-ghost"></i></a>
+    </section>
+
+    <header>
+        <h1 class="headerTitle">
+            <a href="index.html">
+                <span>sklep</span>
+                <span>Amatorski</span>
+            </a>
+            
+            <img src="images/cat2.png" alt="koteczek">
+        </h1>
+
+        <div class="basketIcon">
+            <a href="basket.html" class="basketOpen"><img src="images/shopping-bag.png" alt="basketIcon"></a>
+
+            <div id="cartAmount" class="cartAmount">0</div>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <aside class="categories">
+
+            <form class="nosubmit">
+                <input type="search" class="searchBarInput" autocomplete="off" placeholder="Search..." />
+                <button type="reset" id="close">&times;</button>
+            </form>
+
+            <h1 class="categoriesTitle">Kategorie</h1>
+
+            <section class="categoriesItems">
+            </section>
+
+            <form action="" class="priceRange">
+                <h2>Price filter</h2>
+                <div class="priceFilter">
+                    od <input type="text" name="lowPrice" id="lowPrice" placeholder="min">
+
+                    do <input type="text" name="highPrice" id="highPrice" placeholder="max">
+                </div>
+            </form>
+            <button id="filtr">Search</button>
+
+        </aside>
+
+        <article class="products" id="shop">
+        </article>
+
+    </main>
+
+    <footer class="socials">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laboriosam non nobis nam numquam! Perspiciatis voluptatem consequuntur distinctio id quo.
+    </footer>
+
+
+</body>
+<script src="products.js"></script>
+<script src="main.js"></script>
+</html>
